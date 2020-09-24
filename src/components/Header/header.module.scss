@@ -1,0 +1,39 @@
+@import '../../styles/config/config';
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    z-index: 99;
+    transition: all 300ms ease-in-out;
+
+    @include media-query($large-up) {
+        background: none;
+        box-shadow: none;
+        position: absolute;
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: 0 24px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
+
+        @include media-query($large-up) {
+            grid-template-columns: 10% 80% 10%;
+        }
+    }
+
+    &__logo {
+        grid-column: 1/2;
+        align-self: center;
+
+        svg {
+            height: 42px;
+            width: auto;
+        }
+    }
+}
