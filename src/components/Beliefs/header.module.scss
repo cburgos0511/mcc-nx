@@ -1,0 +1,53 @@
+@import '../../styles/config/config';
+
+.header {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    @include media-query($medium-up) {
+        margin-bottom: 225px;
+    }
+
+    &__wrapper {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        padding: 120px 24px;
+
+        @include media-query($medium-up) {
+            padding-top: 220px;
+        }
+    }
+}
+
+.header-content {
+    position: relative;
+    width: 100%;
+    max-width: 790px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    align-content: start;
+
+    @include media-query($medium-up) {
+        place-items: center;
+    }
+
+    h4 {
+        margin: 0;
+        font-family: var(--montserrat);
+        letter-spacing: 1.1px;
+        color: var(--color-black);
+        opacity: 0.2;
+        font-weight: 400;
+    }
+
+    h1 {
+        margin: 16px 0;
+    }
+}
