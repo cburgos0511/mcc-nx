@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "formik": "^2.1.5",
+    "google-map-react": "^2.1.6",
     "gsap": "^3.5.1",
     "next": "9.5.3",
     "react": "16.13.1",

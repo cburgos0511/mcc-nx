@@ -9,7 +9,13 @@ const HeaderNav = React.forwardRef(({ items, isMenuOpen, toggleNav }, ref) => {
     <nav className={`${s.nav} ${openClass}`} ref={ref}>
       {items.map((item, index) => (
         <Link activeClassName={s.active} href={item.slug}>
-          <a className={s.nav__item}>{item.name}</a>
+          <a
+            onClick={() => toggleNav()}
+            ref={items[index].ref}
+            className={s.nav__item}
+          >
+            {item.name}
+          </a>
         </Link>
       ))}
     </nav>
