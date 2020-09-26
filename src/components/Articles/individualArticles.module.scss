@@ -1,16 +1,14 @@
 @import "../../styles/config/config";
 
 .main {
-  margin: 100px 0;
-  padding: 0 1rem;
+  padding: 100px 1rem;
 
   @include media-query($medium-up) {
-    margin: 200px 0;
-    padding: 0 15%;
+    padding: 200px 15%;
   }
 
   @include media-query($large-up) {
-    padding: 0 26%;
+    padding: 200px 26%;
   }
 
   .subtitle {

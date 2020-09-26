@@ -1,7 +1,6 @@
 import s from "../Articles/individualArticles.module.scss";
 import React, { useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;

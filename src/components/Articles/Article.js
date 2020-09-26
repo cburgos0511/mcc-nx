@@ -1,16 +1,16 @@
 import React from "react";
 import s from "./article.module.scss";
-import Link from "next/link";
+import Link from "../Link";
 
 const Article = ({ article }) => {
   return (
     <div className={s.article}>
       {!article.resource ? (
-        <Link href={article.link} className={s.linkWrap}>
-          <>
+        <Link href={article.link}>
+          <a className={s.linkWrap}>
             <h1>{article.title}</h1>
             <p>{article.description}</p>
-          </>
+          </a>
         </Link>
       ) : (
         <a
