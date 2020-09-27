@@ -7,8 +7,10 @@ import useSWR from "swr";
 import pages from "../data";
 
 export default function Home() {
-  const { data } = useSWR("/api/rss-feed");
-  console.log(data);
+  // const { data } = useSWR("/api/rss-feed");
+  const { data: msg } = useSWR("/api/message");
+
+  console.log(msg);
 
   const pageData = pages[0].data;
 

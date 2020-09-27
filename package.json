@@ -12,13 +12,16 @@
     "google-map-react": "^2.1.6",
     "gsap": "^3.5.1",
     "next": "9.5.3",
+    "pg": "^8.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-h5-audio-player": "^3.4.1",
     "react-pdf": "^5.0.0",
     "sass": "^1.26.11",
+    "sql-template-strings": "^2.2.2",
     "swr": "^0.3.4",
-    "use-scroll-lock": "^1.0.0"
+    "use-scroll-lock": "^1.0.0",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
