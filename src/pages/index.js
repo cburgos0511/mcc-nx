@@ -7,10 +7,7 @@ import useSWR from "swr";
 import pages from "../data";
 
 export default function Home() {
-  // const { data } = useSWR("/api/rss-feed");
   const { data: msg } = useSWR("/api/message");
-
-  console.log(msg);
 
   const pageData = pages[0].data;
 
@@ -23,8 +20,7 @@ export default function Home() {
       <Hero home data={pageData.HomeHero} />
       <MeetingTimes times={pageData.MeetingTimes} />
       <HomeBeliefs data={pageData.OurBeliefsSection} />
-      <FeaturedMessages />
+      <FeaturedMessages featured={msg} />
     </div>
   );
 }
-//podcast={allPodcastRssFeedEpisode}

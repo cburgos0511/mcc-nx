@@ -25,7 +25,7 @@ const articles = [
     author: "John Malone",
     description:
       "The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.",
-    link: "/articles/owh-evolution",
+    link: "/article/owh-and-evolution",
     date_published: "Apr 1, 1999",
     resource: false,
   },
@@ -45,7 +45,7 @@ const articles = [
     author: "John Malone",
     description:
       "The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. ",
-    link: "/wwjd",
+    link: "/article/wwjd",
     date_published: "Apr 1, 1999",
     resource: false,
   },

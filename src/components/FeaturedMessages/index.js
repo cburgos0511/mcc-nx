@@ -4,7 +4,7 @@ import Message from "./Message";
 import AudioPlayer from "react-h5-audio-player";
 import Close from "../../../svgs/cancel.svg";
 
-const FeaturedMessages = ({ podcast }) => {
+const FeaturedMessages = ({ featured }) => {
   const [mp4, setMp4] = useState(null);
   const [player, setPlayer] = useState(false);
 
@@ -16,13 +16,13 @@ const FeaturedMessages = ({ podcast }) => {
   return (
     <section className={s.feature}>
       <h1 className={s.feature__h1}>Featured Messages</h1>
-      {/* {podcast.edges.map((pc) => (
+      {featured?.map((pc) => (
         <Message
-          key={pc.node.id}
-          title={pc.node.item.title}
-          published={pc.node.item.isoDate}
-          speaker={pc.node.item.creator}
-          url={pc.node.item.enclosure.url}
+          key={pc.message_id}
+          title={pc.name}
+          published={pc.date}
+          speaker={pc.speaker_id}
+          url={pc.s3_id}
           onHandlePlayer={onHandlePlayer}
         />
       ))}
@@ -33,13 +33,13 @@ const FeaturedMessages = ({ podcast }) => {
           </div>
           <AudioPlayer
             className={s.player__inner}
-            src={mp4}
+            src={`https://mcc-s3.s3.us-east-2.amazonaws.com/${mp4}.mp3`}
             autoPlay
             layout="horizontal-reverse"
             progressJumpSteps={{ backward: 15000, forward: 15000 }}
           />
         </div>
-      )} */}
+      )}
     </section>
   );
 };

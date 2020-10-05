@@ -1,5 +1,5 @@
 import React from 'react'
-import s from '../../components/Articles/individualArticles.scss'
+import s from '../../components/Articles/individualArticles.module.scss'
 
 const ThreeResurrection = () => {
     return (

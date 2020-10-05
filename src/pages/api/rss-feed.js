@@ -12,7 +12,7 @@ export default async (req, res) => {
     <link rel="self" type="application/atom+xml" href="https://example.com/api/feed/"/>
     <generator uri="https://ironeko.com version="1.0.0">Ironeko</generator>
   </feed>`;
-    console.log(feed);
+    // console.log(feed);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/xml; charset=utf-8");
