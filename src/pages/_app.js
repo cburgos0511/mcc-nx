@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps, router }) {
         <Layout>
           <SWRConfig
             value={{
-              refreshInterval: 3000,
+              refreshInterval: 60000,
               fetcher,
             }}
           >

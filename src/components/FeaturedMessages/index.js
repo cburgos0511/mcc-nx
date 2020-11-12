@@ -18,11 +18,11 @@ const FeaturedMessages = ({ featured }) => {
       <h1 className={s.feature__h1}>Featured Messages</h1>
       {featured?.map((pc) => (
         <Message
-          key={pc.message_id}
-          title={pc.name}
+          key={pc.title}
+          title={pc.title}
           published={pc.date}
-          speaker={pc.speaker_id}
-          url={pc.s3_id}
+          speaker={pc.creator}
+          url={pc.enclosure.url}
           onHandlePlayer={onHandlePlayer}
         />
       ))}
@@ -33,7 +33,7 @@ const FeaturedMessages = ({ featured }) => {
           </div>
           <AudioPlayer
             className={s.player__inner}
-            src={`https://mcc-s3.s3.us-east-2.amazonaws.com/${mp4}.mp3`}
+            src={mp4}
             autoPlay
             layout="horizontal-reverse"
             progressJumpSteps={{ backward: 15000, forward: 15000 }}

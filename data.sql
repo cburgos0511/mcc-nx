@@ -16,7 +16,6 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-ALTER TABLE IF EXISTS ONLY public.series DROP CONSTRAINT IF EXISTS series_speaker_speaker_id_fk;
 ALTER TABLE IF EXISTS ONLY public.message DROP CONSTRAINT IF EXISTS message_speaker_speaker_id_fk;
 ALTER TABLE IF EXISTS ONLY public.message DROP CONSTRAINT IF EXISTS message_series_series_id_fk;
 DROP INDEX IF EXISTS public.user_user_id_uindex;
@@ -79,8 +78,7 @@ CREATE TABLE public.series (
     series_id uuid NOT NULL,
     name text,
     start_date date,
-    end_date date,
-    speaker_id uuid
+    end_date date
 );
 
 
@@ -122,6 +120,18 @@ CREATE TABLE public."user" (
 
 COPY public.message (name, date, speaker_id, topics, duration, file_size, series_id, verses, message_id, s3_id) FROM stdin;
 Test	2020-10-04	8e952448-0681-11eb-adc1-0242ac120002	Test	90	1	3eff017c-06b0-11eb-adc1-0242ac120002	\N	7217e134-0681-11eb-adc1-0242ac120002	DVIDS--Audio--The-Contracting-Experience--Episode-8-Mission-Focused-Business-Leaders--Maj.-Gen.-Cameron-Holt-(Part-1)
+Romans 1	2020-10-04	20834054-0a58-11eb-adc1-0242ac120002	Romans	89	1	68fe5e54-0a58-11eb-adc1-0242ac120002	\N	c4c7f76d-95dc-4778-addf-c250f2639b44	test
+Romans 4	2020-10-15	20834054-0a58-11eb-adc1-0242ac120002	Romans	56	1	68fe5e54-0a58-11eb-adc1-0242ac120002	\N	6a0fe00a-0a4f-11eb-adc1-0242ac120002	test
+Romans 3	2020-10-13	20834054-0a58-11eb-adc1-0242ac120002	Romans	54	1	68fe5e54-0a58-11eb-adc1-0242ac120002	\N	6a0fdeca-0a4f-11eb-adc1-0244ac120002	test
+Romans 2	2020-10-10	20834054-0a58-11eb-adc1-0242ac120002	Romans	60	1	68fe5e54-0a58-11eb-adc1-0242ac120002	\N	6a0fdc2c-0a4f-11eb-adc1-0246ac120002	test
+Revelation 18	2010-10-04	3059c678-0a59-11eb-adc1-0242ac120002	End Times	30	1	a20b376e-0a5b-11eb-adc1-0242ac120002	\N	6a0fe6ea-0a4f-11eb-adc1-0242ac120002	test
+Revelation 10	2010-10-04	3059c678-0a59-11eb-adc1-0242ac120002	Revelation	45	1	a20b376e-0a5b-11eb-adc1-0242ac120002	\N	6a0fe7f8-0a4f-11eb-adc1-0242ac120002	test
+Revelation 9	2010-10-04	3059c678-0a59-11eb-adc1-0242ac120002	Revelation	48	1	a20b376e-0a5b-11eb-adc1-0242ac120002	\N	9e013d50-0a4f-11eb-adc1-0242ac120002	test
+Revelation 19	2010-10-04	3059c678-0a59-11eb-adc1-0242ac120002	End Times	90	1	a20b376e-0a5b-11eb-adc1-0242ac120002	\N	6a0fe5e6-0a4f-11eb-adc1-0242ac120002	test
+Mark 11	2019-11-21	4c9a9c82-0a58-11eb-adc1-0242ac120002	Mark	65	1	9b26dfc0-0a5b-11eb-adc1-0242ac120002	\N	6a0fe262-0a4f-11eb-adc1-0242ac120002	test
+Mark 13	2019-12-28	4c9a9c82-0a58-11eb-adc1-0242ac120002	Mark	82	1	9b26dfc0-0a5b-11eb-adc1-0242ac120002	\N	6a0fe4b0-0a4f-11eb-adc1-0242ac120002	test
+Mark 10	2019-11-20	4c9a9c82-0a58-11eb-adc1-0242ac120002	Mark	54	1	9b26dfc0-0a5b-11eb-adc1-0242ac120002	\N	6a0fe168-0a4f-11eb-adc1-0242ac120002	test
+Mark 12	2019-12-22	4c9a9c82-0a58-11eb-adc1-0242ac120002	Mark	76	1	9b26dfc0-0a5b-11eb-adc1-0242ac120002	\N	6a0fe398-0a4f-11eb-adc1-0242ac120002	test
 \.
 
 
@@ -129,8 +139,11 @@ Test	2020-10-04	8e952448-0681-11eb-adc1-0242ac120002	Test	90	1	3eff017c-06b0-11e
 -- Data for Name: series; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.series (series_id, name, start_date, end_date, speaker_id) FROM stdin;
-3eff017c-06b0-11eb-adc1-0242ac120002	Testing AWS	2020-10-01	2020-10-05	8e952448-0681-11eb-adc1-0242ac120002
+COPY public.series (series_id, name, start_date, end_date) FROM stdin;
+68fe5e54-0a58-11eb-adc1-0242ac120002	Romans	2020-10-11	\N
+a20b376e-0a5b-11eb-adc1-0242ac120002	Revelation	2019-11-01	\N
+9b26dfc0-0a5b-11eb-adc1-0242ac120002	Mark	2019-11-01	\N
+3eff017c-06b0-11eb-adc1-0242ac120002	Testing	2020-10-01	2020-10-05
 \.
 
 
@@ -140,6 +153,10 @@ COPY public.series (series_id, name, start_date, end_date, speaker_id) FROM stdi
 
 COPY public.speaker (speaker_id, first_name, last_name) FROM stdin;
 8e952448-0681-11eb-adc1-0242ac120002	Cruz	Burgos
+20834054-0a58-11eb-adc1-0242ac120002	Jerod	Santo
+3059c678-0a59-11eb-adc1-0242ac120002	Mark	Mancuso
+4c9a9c82-0a58-11eb-adc1-0242ac120002	Cory	Eikmeier
+3059c678-0a59-11eb-adc1-0242ac120009	Dan	Backens
 \.
 
 
@@ -250,15 +267,6 @@ ALTER TABLE ONLY public.message
 ALTER TABLE ONLY public.message
     ADD CONSTRAINT message_speaker_speaker_id_fk FOREIGN KEY (speaker_id) REFERENCES public.speaker(speaker_id);
 
-
---
--- Name: series series_speaker_speaker_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.series
-    ADD CONSTRAINT series_speaker_speaker_id_fk FOREIGN KEY (speaker_id) REFERENCES public.speaker(speaker_id);
-
-INSERT INTO public.message (name, date, speaker_id, topics, duration, file_size, series_id, verses, message_id, s3_id) VALUES ('Test without series', '2020-10-04', '8e952448-0681-11eb-adc1-0242ac120002', 'Test', '89', 1, null, null, 'c4c7f76d-95dc-4778-addf-c250f2639b44', 'test')
 
 --
 -- PostgreSQL database dump complete

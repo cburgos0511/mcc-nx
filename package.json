@@ -23,6 +23,7 @@
     "react-dom": "16.13.1",
     "react-h5-audio-player": "^3.4.1",
     "react-pdf": "^5.0.0",
+    "rss-parser": "^3.9.0",
     "sass": "^1.26.11",
     "sql-template-strings": "^2.2.2",
     "swr": "^0.3.4",
