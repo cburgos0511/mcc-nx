@@ -1,39 +1,40 @@
 // import HM from '../../assets/History_of_Man.pdf'
-// import React, { useState } from 'react'
+import React, { useState } from "react";
 // import Timeline from '../../components/Articles/Timeline'
 
-// const HistoryOfMan = () => {
-//     const [numPages, setNumPages] = useState(null)
-//     const [pageNumber, setPageNumber] = useState(1)
+const HistoryOfMan = () => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
-//     const onDocumentLoadSuccess = ({ numPages }) => {
-//         setNumPages(numPages)
-//     }
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
 
-//     const changePage = offset => {
-//         setPageNumber(prevPageNumber => prevPageNumber + offset)
-//     }
+  const changePage = (offset) => {
+    setPageNumber((prevPageNumber) => prevPageNumber + offset);
+  };
 
-//     const previousPage = () => {
-//         changePage(-1)
-//     }
+  const previousPage = () => {
+    changePage(-1);
+  };
 
-//     const nextPage = () => {
-//         changePage(1)
-//     }
-//     return (
-//         <main>
-//             <Timeline
-//                 title="History of Man"
-//                 load={onDocumentLoadSuccess}
-//                 previousPage={previousPage}
-//                 nextPage={nextPage}
-//                 currentPage={pageNumber}
-//                 totalPages={numPages}
-//                 pdf={HM}
-//             />
-//         </main>
-//     )
-// }
+  const nextPage = () => {
+    changePage(1);
+  };
+  return (
+    <main>
+      {/* <Timeline
+                title="History of Man"
+                load={onDocumentLoadSuccess}
+                previousPage={previousPage}
+                nextPage={nextPage}
+                currentPage={pageNumber}
+                totalPages={numPages}
+                pdf={HM}
+            /> */}
+      <h1>Work in Progress...</h1>
+    </main>
+  );
+};
 
-// export default HistoryOfMan
+export default HistoryOfMan;
