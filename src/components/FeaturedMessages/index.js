@@ -5,6 +5,8 @@ import AudioPlayer from "react-h5-audio-player";
 import Close from "../../../svgs/cancel.svg";
 
 const FeaturedMessages = ({ featured }) => {
+  console.log(featured);
+
   const [mp4, setMp4] = useState(null);
   const [player, setPlayer] = useState(false);
 
@@ -15,14 +17,15 @@ const FeaturedMessages = ({ featured }) => {
 
   return (
     <section className={s.feature}>
-      <h1 className={s.feature__h1}>Featured Messages</h1>
+      <h1 className={s.feature__h1}>Latest Podcast Episodes</h1>
       {featured?.map((pc) => (
         <Message
           key={pc.title}
           title={pc.title}
           published={pc.date}
+          description={pc.contentSnippet}
           speaker={pc.creator}
-          url={pc.enclosure.url}
+          url={pc.link}
           onHandlePlayer={onHandlePlayer}
         />
       ))}
