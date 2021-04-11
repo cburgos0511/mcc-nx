@@ -1,7 +1,7 @@
 const home = {
     HomeHero: {
         about:
-            'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. The way the buttery crust offsets the tart and gooey baked apples. The whole family together enjoying the ritual. Combined with a generous amount of European butter and sugar, this is what sustains my career.',
+            'A local gathering of Christian believers publicly identifying with the Lord Jesus Christ and one another. We are called to be the pillar and support of the truth.',
     },
     MeetingTimes: [
         {
