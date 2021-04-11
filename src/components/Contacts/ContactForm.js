@@ -105,7 +105,7 @@ const ContactForm = () => {
       </Formik>
       {thankYouOpen && (
         <div className={s.thankyou}>
-          <p>Thank you for your message. It has been sent.</p>
+          <p>Thank you for your message. The message has been sent.</p>
         </div>
       )}
       {failMessageOpen && (
