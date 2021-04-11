@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import s from "./form.module.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const ContactForm = () => {
+  const [thankYouOpen, setThankYouOpen] = useState(false);
+  const [failMessageOpen, setFailMessageOpenOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setThankYouOpen(false);
+    }, 5000);
+  }, [thankYouOpen]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFailMessageOpenOpen(false);
+    }, 5000);
+  }, [failMessageOpen]);
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -45,41 +59,41 @@ const ContactForm = () => {
             }),
           })
             .then(() => {
-              alert("Success");
+              setThankYouOpen(true);
               actions.resetForm();
             })
             .catch(() => {
-              alert("Error");
+              setFailMessageOpenOpen(true);
             })
             .finally(() => actions.setSubmitting(false));
         }}
       >
         {() => (
           <Form name="mcc-contact-form" data-netlify={true}>
-            <div className={s.form__wrap}>
+            <div className={s.form__wrap} style={{ height: "92px" }}>
               <label htmlFor="name">Name </label>
               <Field name="name" />
               <ErrorMessage
                 name="name"
-                render={(msg) => <span className={s.error}>*{msg}</span>}
+                render={(msg) => <span className={s.error}>* {msg}</span>}
               />
             </div>
 
-            <div className={s.form__wrap}>
+            <div className={s.form__wrap} style={{ height: "92px" }}>
               <label htmlFor="email">Email </label>
               <Field name="email" />
               <ErrorMessage
                 name="email"
-                render={(msg) => <span className={s.error}>*{msg}</span>}
+                render={(msg) => <span className={s.error}>* {msg}</span>}
               />
             </div>
 
-            <div className={s.form__wrap}>
+            <div className={s.form__wrap} style={{ height: "340px" }}>
               <label htmlFor="message">Message </label>
               <Field name="message" component="textarea" rows={16} />
               <ErrorMessage
                 name="message"
-                render={(msg) => <span className={s.error}>*{msg}</span>}
+                render={(msg) => <span className={s.error}>* {msg}</span>}
               />
             </div>
 
@@ -89,6 +103,16 @@ const ContactForm = () => {
           </Form>
         )}
       </Formik>
+      {thankYouOpen && (
+        <div className={s.thankyou}>
+          <p>Thank you for your message. It has been sent.</p>
+        </div>
+      )}
+      {failMessageOpen && (
+        <div className={s.failMessage}>
+          <p>Something went wrong. Try again later.</p>
+        </div>
+      )}
     </div>
   );
 };
