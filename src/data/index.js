@@ -14,11 +14,11 @@ const pages = [
     uid: "/beliefs",
     data: principles,
   },
-  // {
-  //     id: '94596dd2-3e95-4587-bdfd-4f48af31b06d',
-  //     name: 'messages',
-  //     uid: '/',
-  // },
+  {
+    id: "94596dd2-3e95-4587-bdfd-4f48af31b06d",
+    name: "archive",
+    uid: "http://messages.millardcommunitychurch.com/",
+  },
   {
     id: "2fa83d93-e460-4298-a07d-70d0b3642397",
     name: "contact",

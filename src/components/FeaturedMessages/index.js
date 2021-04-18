@@ -3,10 +3,9 @@ import s from "./featured.module.scss";
 import Message from "./Message";
 import AudioPlayer from "react-h5-audio-player";
 import Close from "../../../svgs/cancel.svg";
+import Link from "next/link";
 
 const FeaturedMessages = ({ featured }) => {
-  console.log(featured);
-
   const [mp4, setMp4] = useState(null);
   const [player, setPlayer] = useState(false);
 
@@ -25,7 +24,8 @@ const FeaturedMessages = ({ featured }) => {
           published={pc.date}
           description={pc.contentSnippet}
           speaker={pc.creator}
-          url={pc.link}
+          link={pc.link}
+          player={pc.enclosure.url}
           onHandlePlayer={onHandlePlayer}
         />
       ))}
@@ -43,6 +43,13 @@ const FeaturedMessages = ({ featured }) => {
           />
         </div>
       )}
+      <div className={s.feature__link}>
+        <Link href="https://anchor.fm/enjoy-the-bible">
+          <a className="cta" target="_blank">
+            View more <span></span>
+          </a>
+        </Link>
+      </div>
     </section>
   );
 };

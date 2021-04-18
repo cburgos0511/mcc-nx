@@ -1,31 +1,32 @@
-@import '../../styles/config/config';
+@import "../../styles/config/config";
 
 .nav {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 3px solid var(--color-red);
-    margin: 0 16px;
-    padding: 3rem 0;
+  max-width: 900px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(228, 70, 83, 0.6);
+  margin: 0 16px;
+  padding: 3rem 0;
+
+  @include media-query($medium-up) {
+    width: 60%;
+  }
+
+  &__items {
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--color-white);
+    letter-spacing: 2.22px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 16px 16px;
 
     @include media-query($medium-up) {
-        width: 60%;
+      margin: 16px 32px;
     }
-
-    &__items {
-        font-family: var(--montserrat);
-        font-weight: 700;
-        font-size: 14px;
-        color: var(--color-white);
-        letter-spacing: 2.22px;
-        text-align: left;
-        text-transform: uppercase;
-        margin: 16px 16px;
-
-        @include media-query($medium-up) {
-            margin: 16px 32px;
-        }
-    }
+  }
 }

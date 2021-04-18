@@ -11,7 +11,7 @@ export default async (req, res) => {
     res.setHeader("Content-Type", "text/xml; charset=utf-8");
     res.end(JSON.stringify(feed));
   } catch (e) {
-    console.log(e);
+    console.error(e);
     res.statusCode = 500;
     res.end();
   }

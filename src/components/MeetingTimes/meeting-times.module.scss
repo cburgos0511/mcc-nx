@@ -27,6 +27,7 @@
     h3 {
       position: relative;
       display: inline-block;
+      margin-bottom: 0;
 
       &::before {
         content: "";

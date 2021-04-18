@@ -67,6 +67,7 @@
     margin: 0px;
     color: var(--color-n5);
     margin-top: 10px;
+    margin-bottom: 16px;
     @include media-query($medium-up) {
       // margin-left: 5rem;
       margin-top: 0;
@@ -75,7 +76,6 @@
 
   &__link {
     font-size: 12px;
-    margin: 0px;
     text-decoration: none;
     color: var(--color-red);
   }
