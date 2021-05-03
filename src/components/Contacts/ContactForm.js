@@ -35,14 +35,6 @@ const ContactForm = () => {
     }, 5000);
   }, [failMessageOpen]);
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
   const [messageSuccessTL] = useState(
     gsap.timeline({
       paused: true,
@@ -102,25 +94,22 @@ const ContactForm = () => {
               email: "",
               message: "",
             }}
-            onSubmit={(values, actions) => {
-              fetch("/", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: encode({
-                  "form-name": "contact-demo",
-                  ...values,
-                }),
-              })
-                .then(() => {
-                  setThankYouOpen(true);
-                  actions.resetForm();
-                })
-                .catch(() => {
-                  setFailMessageOpenOpen(true);
-                })
-                .finally(() => actions.setSubmitting(false));
+            onSubmit={async (values, actions) => {
+              try {
+                await fetch("/api/contact", {
+                  method: "POST",
+                  headers: {
+                    Accept: "application/json, text/plain, */*",
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(values),
+                });
+
+                setThankYouOpen(true);
+                actions.resetForm();
+              } catch (e) {
+                setFailMessageOpenOpen(true);
+              }
             }}
           >
             {() => (
