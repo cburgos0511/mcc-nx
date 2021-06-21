@@ -20,9 +20,13 @@ const Footer = () => {
     <footer className={s.footer}>
       <FooterNav items={items} />
       <div className={s.footer__info}>
-        <p className={s.footer__info__address}>
+        <a
+          target="_blank"
+          href="https://goo.gl/maps/ULiURzCiWirFuhKo6"
+          className={s.footer__info__address}
+        >
           12656 Weir St, Omaha, NE 68137
-        </p>
+        </a>
         <p>hello@millardcommunity.church</p>
       </div>
     </footer>
