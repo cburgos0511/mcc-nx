@@ -27,7 +27,7 @@ const Footer = () => {
         >
           12656 Weir St, Omaha, NE 68137
         </a>
-        <p>hello@millardcommunity.church</p>
+        {/* <p>hello@millardcommunity.church</p> */}
       </div>
     </footer>
   );

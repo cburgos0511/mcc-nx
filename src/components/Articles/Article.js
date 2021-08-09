@@ -26,8 +26,12 @@ const Article = ({ article }) => {
 
       <div className={s.info}>
         <p className={s.author}>{article.author}</p>
-        <div className={s.divider} />
-        <p className={s.date}>{article.date_published}</p>
+        {article.date_published && (
+          <>
+            <div className={s.divider} />
+            <p className={s.date}>{article.date_published}</p>
+          </>
+        )}
       </div>
     </div>
   );
