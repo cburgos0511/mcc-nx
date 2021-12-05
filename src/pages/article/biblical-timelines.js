@@ -16,16 +16,16 @@ const data = [
     pdf: "/History_of_Man.pdf",
     title: "Adam to Christ",
     description: "A summary version of the 4000 years from Adam to Christ.",
-    author: "John Malone",
-    date_published: "Apr 1, 1999",
+    author: "Dan Backens",
+    date_published: "Jan 1, 2002",
   },
   {
     id: 2,
     pdf: "/seventy_sevens_of_daniel_9.pdf",
     title: "Daniel's 70 Weeks",
     description: "An explanation of the vision of Daniel chapter 9.",
-    author: "Dan Backens",
-    date_published: "Jan 1, 2002",
+    author: "John Malone",
+    date_published: "Apr 1, 2000",
   },
 ];
 
