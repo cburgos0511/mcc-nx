@@ -8,8 +8,8 @@ const data = [
     title: "Biblical History",
     description:
       "A detailed 7000 year history of the world from the Bible perspective.",
-    author: "John Malone",
-    date_published: "Apr 1, 1999",
+    author: "Dan Backens",
+    date_published: "Jan 1, 2002",
   },
   {
     id: 1,
@@ -24,8 +24,8 @@ const data = [
     pdf: "/seventy_sevens_of_daniel_9.pdf",
     title: "Daniel's 70 Weeks",
     description: "An explanation of the vision of Daniel chapter 9.",
-    author: "John Malone",
-    date_published: "Apr 1, 1999",
+    author: "Dan Backens",
+    date_published: "Jan 1, 2002",
   },
 ];
 
@@ -44,7 +44,7 @@ const BiblicalTimelines = () => {
             </div>
             <a
               className={s.link}
-              href="/Condensed_Timeline.pdf"
+              href={timeline.pdf}
               target="_blank"
             ></a>
             <div className={s.info}>
