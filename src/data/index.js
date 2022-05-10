@@ -29,6 +29,11 @@ const pages = [
     name: "articles",
     uid: "/articles",
   },
+  {
+    id: "0e820dc7-db01-49cd-880e-d0d0497db973",
+    name: "resources",
+    uid: "/resources",
+  }
 ];
 
 export default pages;

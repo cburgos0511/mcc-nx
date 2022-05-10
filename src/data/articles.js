@@ -48,16 +48,6 @@ const articles = [
     link: "/article/wwjd",
     date_published: "",
     resource: false,
-  },
-  {
-    id: "56e65dd4-f23e-11ea-adc1-0242ac02j002",
-    title: "Biblical Timelines",
-    author: "",
-    description:
-      "Various Biblical timelines to help you in your study of the Scriptures.",
-    link: "/article/biblical-timelines",
-    date_published: "",
-    resource: false,
   }
 ];
 
