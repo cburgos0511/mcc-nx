@@ -13,20 +13,11 @@
 
   &__logo {
     cursor: pointer;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    svg {
-      height: 40px;
-      margin-top: 4px;
-      width: auto;
-      @include media-query($medium-up) {
-        height: 60px;
-        margin-top: 0;
-      }
-    }
+    height: auto;
+    width: 40px;
 
     @include media-query($medium-up) {
-      grid-row: 1/2;
+      width: 60px;
     }
   }
   &__wrapper {

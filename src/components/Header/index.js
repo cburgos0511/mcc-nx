@@ -1,6 +1,7 @@
 import React, { useState, useRef, createRef, useEffect } from "react";
+import Image from 'next/image'
 import { gsap } from "gsap";
-import Logo from "../../../svgs/mcc-type.svg";
+// import Logo from "../../../svgs/mcc-type.svg";
 import HeaderNav from "./HeaderNav";
 import HeaderBurger from "./HeaderBurger";
 import pages from "../../data";
@@ -82,7 +83,13 @@ const Header = () => {
 
   //Run menuTL base on Menu State
   useEffect(() => {
-    menuTL.reversed(!isMenuOpen);
+    if (isMenuOpen) {
+      document.getElementById('app-root').style.filter = 'blur(7px)'
+      menuTL.play();
+    } else {
+      document.getElementById('app-root').style.filter = 'none'
+      menuTL.reverse();
+    }
   }, [isMenuOpen, menuTL]);
 
   //ScrollLock the body when the menu is open
@@ -96,7 +103,7 @@ const Header = () => {
     <header id="header" className={s.header}>
       <div className={s.header__wrapper}>
         <div className={s.header__logo}>
-          <Logo />
+          <Image height={42} width='100%' src='/svgs/mcc-type.svg' />
         </div>
         <HeaderNav
           header

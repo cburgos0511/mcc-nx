@@ -2,14 +2,13 @@
 
 .nav {
   position: relative;
-
   @include media-query($medium-down) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(var(--color-white), 0.6);
+    background: rgba(255, 255, 255, 0.611);
     pointer-events: none;
     padding: 24px;
     display: flex;
@@ -22,7 +21,9 @@
 
     &.open {
       pointer-events: auto;
+      opacity: 1;
     }
+
   }
 
   @include media-query($large-up) {
@@ -35,7 +36,7 @@
     position: relative;
     font-family: var(--montserrat);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 20px;
     color: var(--color-black);
     letter-spacing: 2.22px;
     text-align: left;

@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main style={{ minHeight: "48vh" }}>{children}</main>
+      <main id='app-root' style={{
+        position: 'relative',
+      }} >{children}</main>
       <Footer />
     </>
   );
