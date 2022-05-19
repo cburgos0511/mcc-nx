@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import { SWRConfig } from "swr";
 import fetcher from "../utils/fetcher";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <SWRConfig

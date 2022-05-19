@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import Image from 'next/image'
 import s from "./featured.module.scss";
 import Message from "./Message";
 import AudioPlayer from "react-h5-audio-player";
-import Close from "../../../svgs/cancel.svg";
 import Link from "next/link";
 
 const FeaturedMessages = ({ featured }) => {
@@ -32,7 +32,7 @@ const FeaturedMessages = ({ featured }) => {
       {player && (
         <div className={s.player}>
           <div class={s.close} onClick={() => setPlayer(false)}>
-            <Close />
+            <Image src='/svgs/cancel.svg' layout="responsive" height='100%' width='100%' />
           </div>
           <AudioPlayer
             className={s.player__inner}

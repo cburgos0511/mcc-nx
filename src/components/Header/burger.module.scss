@@ -26,7 +26,7 @@
 
     &:first-of-type {
       .open & {
-        transform: rotate(44deg) translate3d(-2px, 0, 0);
+        transform: rotate(45deg) translate3d(-3px, 0, 0);
       }
     }
 
@@ -40,7 +40,7 @@
 
     &:last-of-type {
       .open & {
-        transform: rotate(-46deg) translate3d(-4px, 0, 0);
+        transform: rotate(-45deg) translate3d(-3px, 0, 0);
       }
     }
   }

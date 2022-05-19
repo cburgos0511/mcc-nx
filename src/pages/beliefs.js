@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Beliefs/Header";
 import PrincipalsAndBeliefs from "../components/Beliefs/PrinciplesAndBeliefs";
 import pages from "../data";
+
 const Beliefs = () => {
   const data = pages[1].data;
   return (

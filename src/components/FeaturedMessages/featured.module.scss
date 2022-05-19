@@ -37,7 +37,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-
+  z-index: 1;
   &__inner {
     height: 80px;
     outline: "none";
@@ -48,6 +48,6 @@
   position: absolute;
   width: 12px;
   cursor: pointer;
-  right: 16px;
-  top: 4px;
+  right:8px;
+  top: 8px;
 }

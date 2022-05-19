@@ -3,6 +3,8 @@
 .homeBeliefs {
   position: relative;
   padding: 136px 0;
+  width: 100%;
+  height: 100%;
 
   &__img {
     position: absolute;
@@ -10,8 +12,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/beliefs-bg.jpg");
-    background-size: cover;
   }
 
   &__wrapper {
