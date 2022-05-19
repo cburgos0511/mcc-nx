@@ -8,12 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "formik": "^2.1.5",
     "gsap": "^3.6.0",
-    "next": "^10.0.9",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-h5-audio-player": "^3.4.1",
     "react-pdf": "^5.0.0",
     "rss-parser": "^3.9.0",
