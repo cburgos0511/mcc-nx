@@ -23,7 +23,7 @@ export default function Home({ podcast, pageData }) {
 export const getStaticProps = async () => {
 
   const podcast = await fetch(
-    process.env.NODE_ENV === "production" ? "https://www.millardcommunitychurch.com/" : "http://localhost:3015/api/rss-feed"
+    process.env.NODE_ENV === "production" ? "https://www.millardcommunitychurch.com/api/rss-feed" : "http://localhost:3015/api/rss-feed"
   ).then((res) => res.json());
 
   return {
