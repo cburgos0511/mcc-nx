@@ -1,3 +1,4 @@
+@use "sass:math";
 //MEDIA-QUERY MIXIN
 @mixin media-query($media-query) {
   $breakpoint-found: false;
@@ -22,7 +23,7 @@
 
 //FLUID TYPOGRAPHY
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
