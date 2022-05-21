@@ -1,7 +1,6 @@
 import React, { useState, useRef, createRef, useEffect } from "react";
 import Image from 'next/image'
 import { gsap } from "gsap";
-// import Logo from "../../../svgs/mcc-type.svg";
 import HeaderNav from "./HeaderNav";
 import HeaderBurger from "./HeaderBurger";
 import pages from "../../data";
@@ -83,7 +82,7 @@ const Header = () => {
 
   //Run menuTL base on Menu State
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen && isSmallScreen) {
       document.getElementById('app-root').style.filter = 'blur(7px)'
       menuTL.play();
     } else {
@@ -95,8 +94,11 @@ const Header = () => {
   //ScrollLock the body when the menu is open
   useScrollLock(isMenuOpen);
 
-  const toggleNav = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const closeNav = () => {
+    setIsMenuOpen(false);
+  };
+  const openNav = () => {
+    setIsMenuOpen(true);
   };
 
   return (
@@ -110,9 +112,9 @@ const Header = () => {
           items={items}
           ref={navRef}
           isMenuOpen={isMenuOpen}
-          toggleNav={toggleNav}
+          toggleNav={closeNav}
         />
-        <HeaderBurger toggleNav={toggleNav} isMenuOpen={isMenuOpen} />
+        <HeaderBurger toggleNav={openNav} isMenuOpen={isMenuOpen} />
       </div>
     </header>
   );
