@@ -22,10 +22,10 @@ const Footer = () => {
       <div className={s.footer__info}>
         <a
           target="_blank"
-          href="https://goo.gl/maps/ULiURzCiWirFuhKo6"
+          href="https://goo.gl/maps/CAGFMyVTzXn5eEmX9"
           className={s.footer__info__address}
         >
-          12656 Weir St, Omaha, NE 68137
+          9001 Q Street, Omaha, NE 68127
         </a>
         {/* <p>hello@millardcommunity.church</p> */}
       </div>
