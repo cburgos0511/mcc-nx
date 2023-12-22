@@ -4,7 +4,7 @@ const resources = [
     title: "The History of the Heavens and the Earth",
     author: "Dan Backens",
     description: "A detailed 7000 year history of the world from the Bible perspective.",
-    link: "/HistoryOfTheHeavensAndTheEarth.pdf",
+    link: "/docs/HistoryOfTheHeavensAndTheEarth.pdf",
     local: false,
     date_published: ""
   },
@@ -23,7 +23,7 @@ const resources = [
     title: "Dispensationalism",
     author: "Mark Mancuso",
     description: "An explanation of the Bible's use of dispensations.",
-    link: "/Dispensationalism.pdf",
+    link: "/docs/Dispensationalism.pdf",
     local: false,
     date_published: ""
   },
@@ -32,7 +32,7 @@ const resources = [
     title: "Miracles in the New Testament",
     author: "Mark Mancuso",
     description: "The three words translated 'miracle' in the NT and what they mean.",
-    link: "/Miracles_in_the_New_Testament.pdf",
+    link: "/docs/Miracles_in_the_New_Testament.pdf",
     local: false,
     date_published: ""
   },
@@ -41,7 +41,7 @@ const resources = [
     title: "The Earlier Years of the Modern Tongue Movement",
     author: "G.H. Lang",
     description: "A historical survey and its lessons",
-    link: "/Lang_TonguesMovement.pdf",
+    link: "/docs/Lang_TonguesMovement.pdf",
     local: false,
     date_published: ""
   },

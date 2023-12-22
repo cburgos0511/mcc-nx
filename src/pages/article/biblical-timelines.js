@@ -4,7 +4,7 @@ import s from "../../components/Articles/timelines.module.scss";
 const data = [
   {
     id: 0,
-    pdf: "/Condensed_Timeline.pdf",
+    pdf: "/docs/Condensed_Timeline.pdf",
     title: "Biblical History",
     description:
       "A detailed 7000 year history of the world from the Bible perspective.",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 1,
-    pdf: "/History_of_Man.pdf",
+    pdf: "/docs/History_of_Man.pdf",
     title: "Adam to Christ",
     description: "A summary version of the 4000 years from Adam to Christ.",
     author: "Dan Backens",
@@ -21,7 +21,7 @@ const data = [
   },
   {
     id: 2,
-    pdf: "/seventy_sevens_of_daniel_9.pdf",
+    pdf: "/docs/seventy_sevens_of_daniel_9.pdf",
     title: "Daniel's 70 Weeks",
     description: "An explanation of the vision of Daniel chapter 9.",
     author: "John Malone",
